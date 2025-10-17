@@ -1,0 +1,13 @@
+name: release
+on:
+  release:
+    types: [released]
+
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: releasing
+        uses: actions/github-script@7
+        with:
+          script: console.log("releasing")

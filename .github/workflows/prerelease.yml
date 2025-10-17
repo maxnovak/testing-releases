@@ -1,0 +1,13 @@
+name: prerelease
+on:
+  release:
+    types: [prereleased]
+
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: prereleasing
+        uses: actions/github-script@7
+        with:
+          script: console.log("prereleasing")
