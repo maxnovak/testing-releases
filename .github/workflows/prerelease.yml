@@ -10,4 +10,4 @@ jobs:
       - name: prereleasing
         uses: actions/github-script@v7
         with:
-          script: console.log("prereleasing")
+          script: console.log("${{github.event.release.tag_name}}")
